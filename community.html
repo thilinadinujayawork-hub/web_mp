@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UniHub - Community</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar" aria-label="Primary">
+			<a href="index.html" class="nav-logo">UniHub</a>
+
+			<button class="hamburger-menu" type="button" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="planner.html">Planner</a></li>
+				<li><a href="community.html">Community</a></li>
+				<li><a href="wellness.html">Wellness</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="support.html">Support</a></li>
+			</ul>
+
+			<button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+				Dark / Light
+			</button>
+		</nav>
+	</header>
+
+	<main>
+		<section id="app" class="community-forum" aria-labelledby="community-title">
+			<h1 id="community-title">Student Community Forum</h1>
+
+			<form class="comment-form" @submit.prevent="submitComment">
+				<label for="student-name">Name</label>
+				<input
+					id="student-name"
+					type="text"
+					v-model.trim="newComment.name"
+					placeholder="Enter your name"
+					required
+				>
+
+				<label for="student-comment">Comment</label>
+				<textarea
+					id="student-comment"
+					v-model.trim="newComment.message"
+					placeholder="Share your thoughts with the community"
+					rows="4"
+					required
+				></textarea>
+
+				<button type="submit">Post Comment</button>
+			</form>
+
+			<section class="comment-feed" aria-labelledby="comments-title">
+				<h2 id="comments-title">Recent Comments</h2>
+
+				<ul class="comment-list">
+					<li v-for="(comment, index) in comments" :key="index" class="comment-item">
+						<h3>{{ comment.name }}</h3>
+						<p>{{ comment.message }}</p>
+					</li>
+				</ul>
+			</section>
+		</section>
+	</main>
+
+	<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+	<script src="js/main.js" defer></script>
+	<script src="js/vue-forum.js" defer></script>
+</body>
+</html>

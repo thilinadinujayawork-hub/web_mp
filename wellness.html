@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UniHub - Wellness</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="nav-logo">UniHub</a>
+
+      <button class="hamburger-menu" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="wellness.html">Wellness</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+        Dark / Light
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wellness-tips" aria-labelledby="wellness-tips-title">
+      <h1 id="wellness-tips-title">Student Wellness Tips</h1>
+
+      <div class="wellness-grid">
+        <article class="wellness-card">
+          <h2>Take Short Breaks</h2>
+          <p>
+            Step away from your work regularly to reduce stress and keep your focus fresh throughout the day.
+          </p>
+        </article>
+
+        <article class="wellness-card">
+          <h2>Stay Active</h2>
+          <p>
+            Light exercise, stretching, or a short walk can improve your energy and help balance student life.
+          </p>
+        </article>
+
+        <article class="wellness-card">
+          <h2>Protect Your Balance</h2>
+          <p>
+            Plan time for rest, sleep, and social activities so school responsibilities do not take over everything.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="budget-calculator" aria-labelledby="budget-calculator-title">
+      <h2 id="budget-calculator-title">Student Budget Calculator (Smart Tool)</h2>
+
+      <form class="budget-form">
+        <div class="budget-field">
+          <label for="monthly-income">Monthly Income</label>
+          <input type="number" id="monthly-income" name="monthly-income" placeholder="Enter your income">
+        </div>
+
+        <div class="budget-field">
+          <label for="food-expenses">Food</label>
+          <input type="number" id="food-expenses" name="food-expenses" placeholder="Food expenses">
+        </div>
+
+        <div class="budget-field">
+          <label for="transport-expenses">Transport</label>
+          <input type="number" id="transport-expenses" name="transport-expenses" placeholder="Transport expenses">
+        </div>
+
+        <div class="budget-field">
+          <label for="study-materials-expenses">Study Materials</label>
+          <input type="number" id="study-materials-expenses" name="study-materials-expenses" placeholder="Study materials expenses">
+        </div>
+
+        <button type="button" class="budget-button">Calculate Balance</button>
+      </form>
+
+      <p id="budget-result" class="budget-result">Remaining balance will appear here.</p>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/wellness.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UniHub - Support</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="nav-logo">UniHub</a>
+
+      <button class="hamburger-menu" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="wellness.html">Wellness</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+
+      <button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+        Dark / Light
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="support-section" aria-labelledby="support-title">
+      <h1 id="support-title">Support Center</h1>
+
+      <div class="support-layout">
+        <section class="feedback-panel" aria-labelledby="feedback-title">
+          <h2 id="feedback-title">Feedback Form</h2>
+
+          <form class="feedback-form">
+            <label for="support-name">Name</label>
+            <input type="text" id="support-name" name="support-name" placeholder="Enter your name" required>
+
+            <label for="support-email">Email</label>
+            <input type="email" id="support-email" name="support-email" placeholder="Enter your email" required>
+
+            <label for="support-message">Message</label>
+            <textarea id="support-message" name="support-message" rows="5" placeholder="Write your message here" required></textarea>
+
+            <p id="form-error-msg" class="form-error" aria-live="polite"></p>
+
+            <button type="submit" class="feedback-button">Submit Feedback</button>
+          </form>
+        </section>
+
+        <section class="faq-panel" aria-labelledby="faq-title">
+          <h2 id="faq-title">FAQ Accordion</h2>
+
+          <div class="faq-list">
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
+                How do I reset my password?
+              </button>
+              <div id="faq-answer-1" class="faq-answer" hidden>
+                <p>
+                  Use the account settings page or contact the campus help desk to request a password reset.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+                Where can I find academic support?
+              </button>
+              <div id="faq-answer-2" class="faq-answer" hidden>
+                <p>
+                  Visit the academic support office or browse the Planner and Support sections for study resources.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+                How do I report an issue with the platform?
+              </button>
+              <div id="faq-answer-3" class="faq-answer" hidden>
+                <p>
+                  Submit your issue using the feedback form above and our team will review it as soon as possible.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/support.js" defer></script>
+</body>
+</html>
