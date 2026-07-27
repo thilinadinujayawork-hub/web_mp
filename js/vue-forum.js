@@ -7,12 +7,12 @@ Vue.createApp({
 			},
 			comments: [
 				{
-					name: 'Alex',
+					name: 'Thilina',
 					text: 'Great platform!',
 					message: 'Great platform!'
 				},
 				{
-					name: 'Jordan',
+					name: 'Nirmal',
 					text: 'Looking forward to the upcoming events.',
 					message: 'Looking forward to the upcoming events.'
 				}

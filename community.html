@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>UniHub - Community</title>
 	<link rel="stylesheet" href="css/style.css">
+	
 </head>
 <body>
 	<header>
@@ -35,7 +36,7 @@
 
 	<main>
 		<section id="app" class="community-forum" aria-labelledby="community-title">
-			<h1 id="community-title">Student Community Forum</h1>
+			<h1 id="community-title"><i class="fa-solid fa-users"></i> Student Community Forum</h1>
 
 			<form class="comment-form" @submit.prevent="submitComment">
 				<label for="student-name">Name</label>
@@ -60,11 +61,11 @@
 			</form>
 
 			<section class="comment-feed" aria-labelledby="comments-title">
-				<h2 id="comments-title">Recent Comments</h2>
+				<h2 id="comments-title"><i class="fa-solid fa-comments"></i> Recent Comments</h2>
 
 				<ul class="comment-list">
 					<li v-for="(comment, index) in comments" :key="index" class="comment-item">
-						<h3>{{ comment.name }}</h3>
+						<h3><i class="fa-solid fa-circle-user"></i> {{ comment.name }}</h3>
 						<p>{{ comment.message }}</p>
 					</li>
 				</ul>

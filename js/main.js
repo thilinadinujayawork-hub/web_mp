@@ -27,3 +27,32 @@ if (themeToggleBtn) {
     }
   });
 }
+
+// Auto-scroll the hero slider when it is present on the page
+function initSliderAutoScroll() {
+  const sliderTrack = document.querySelector('.slider-track');
+
+  if (!sliderTrack) {
+    return;
+  }
+
+  const sliderImages = sliderTrack.querySelectorAll('img');
+
+  if (sliderImages.length === 0) {
+    return;
+  }
+
+  let counter = 0;
+
+  setInterval(() => {
+    counter += 1;
+
+    if (counter >= sliderImages.length) {
+      counter = 0;
+    }
+
+    sliderTrack.style.transform = `translateX(-${counter * 100}%)`;
+  }, 3000);
+}
+
+initSliderAutoScroll();
