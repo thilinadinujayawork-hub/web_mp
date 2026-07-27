@@ -63,6 +63,11 @@ body {
   transition: color 0.2s ease;
 }
 
+.nav-links a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .nav-links a:hover {
   color: var(--primary-color);
 }
