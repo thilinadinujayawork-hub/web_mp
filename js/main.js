@@ -8,9 +8,22 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 // Select the theme toggle button
-const themeToggle = document.querySelector('#theme-toggle');
+const themeToggleBtn = document.querySelector('#theme-toggle');
+
+// Restore the saved theme on page load
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
 
 // Toggle dark mode on the body when the theme button is clicked
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
