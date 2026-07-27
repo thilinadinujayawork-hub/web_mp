@@ -724,11 +724,21 @@ main {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.hero-buttons .btn-outline {
+  margin-top: 0;
 }
 
 .btn-outline:hover {
-  background: var(--primary-color);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--primary-color);
 }
 
 .fa-location-dot {
@@ -1049,4 +1059,10 @@ main {
     justify-self: stretch;
     width: 100%;
   }
+}
+
+.hero-buttons a {
+    min-width: 170px;
+    padding: 12px 25px;
+    box-sizing: border-box;
 }
